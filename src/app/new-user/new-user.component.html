@@ -1,0 +1,45 @@
+<div class="row">
+    <div class="col-xs-12">
+        <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+            <div class="row">
+                <div class="col-xs-12">
+                    <button type="submit" class="btn btn-success" [disabled]="!userForm.valid">Save</button>
+                    <button type="button" class="btn btn-danger" (click)="onCancel()">Cancel</button>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" formControlName="name" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <label for="Id">Id</label>
+                        <input type="text" id="Id" formControlName="Id" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <label for="Email">Email</label>
+                        <input type="text" id="Email" formControlName="email" class="form-control" #imagePath>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <label for="Avatar">Avatar</label>
+                        <input type="text" id="Avatar" formControlName="avatar" class="form-control" #imagePath>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

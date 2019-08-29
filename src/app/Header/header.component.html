@@ -1,0 +1,26 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a routerLink="/users" class="navbar-brand">Careclues</a>
+        </div>
+
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li routerLinkActive="active">
+                    <a routerLink="users" *ngIf="isAuthenticate">Users</a>
+                </li>
+                <li routerLinkActive="active">
+                    <a routerLink="new" *ngIf="isAuthenticate">Create User</a>
+                </li>
+                <li routerLinkActive="active">
+                    <a routerLink="/auth" *ngIf="!isAuthenticate">Authenticate</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a style="cursor: pointer;" *ngIf="isAuthenticate" (click)="onLogout()">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
