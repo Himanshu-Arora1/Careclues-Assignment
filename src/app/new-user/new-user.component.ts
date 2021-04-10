@@ -21,7 +21,7 @@ export class NewUserComponent implements OnInit {
               private router: Router) { }
 
   ngOnInit() {
-    console.log("1new");
+    console.log("1n");
     this.route.params.subscribe(
       (params: Params) => {
         console.log('paramms', params);
